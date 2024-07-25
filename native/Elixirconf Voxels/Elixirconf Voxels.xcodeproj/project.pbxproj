@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001451B42C500125001C46CE /* ElixirconfVoxelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451B32C500125001C46CE /* ElixirconfVoxelsApp.swift */; };
+		001451B62C500125001C46CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451B52C500125001C46CE /* ContentView.swift */; };
+		001451B82C500126001C46CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001451B72C500126001C46CE /* Assets.xcassets */; };
+		001451BB2C500126001C46CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001451BA2C500126001C46CE /* Preview Assets.xcassets */; };
+		001451C42C500184001C46CE /* LiveViewNative in Frameworks */ = {isa = PBXBuildFile; productRef = 001451C32C500184001C46CE /* LiveViewNative */; };
+		001451C62C500184001C46CE /* LiveViewNativeStylesheet in Frameworks */ = {isa = PBXBuildFile; productRef = 001451C52C500184001C46CE /* LiveViewNativeStylesheet */; };
+		001451C82C5001DD001C46CE /* ConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451C72C5001DD001C46CE /* ConnectingView.swift */; };
+		001451CA2C5001E8001C46CE /* DisconnectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451C92C5001E8001C46CE /* DisconnectedView.swift */; };
+		001451CC2C5001F2001C46CE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451CB2C5001F2001C46CE /* ErrorView.swift */; };
+		001451CE2C5001FC001C46CE /* ReconnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451CD2C5001FC001C46CE /* ReconnectingView.swift */; };
+		001451DD2C5019A3001C46CE /* Elixirconf_Voxels_CompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451DC2C5019A3001C46CE /* Elixirconf_Voxels_CompanionApp.swift */; };
+		001451DF2C5019A3001C46CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451DE2C5019A3001C46CE /* ContentView.swift */; };
+		001451E12C5019A5001C46CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001451E02C5019A5001C46CE /* Assets.xcassets */; };
+		001451E42C5019A5001C46CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001451E32C5019A5001C46CE /* Preview Assets.xcassets */; };
+		001451E82C5019DA001C46CE /* DisconnectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451C92C5001E8001C46CE /* DisconnectedView.swift */; };
+		001451E92C5019DA001C46CE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451CB2C5001F2001C46CE /* ErrorView.swift */; };
+		001451EA2C5019DA001C46CE /* ReconnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451CD2C5001FC001C46CE /* ReconnectingView.swift */; };
+		001451EB2C5019DA001C46CE /* ConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451C72C5001DD001C46CE /* ConnectingView.swift */; };
+		001451EE2C5019E8001C46CE /* LiveViewNative in Frameworks */ = {isa = PBXBuildFile; productRef = 001451ED2C5019E8001C46CE /* LiveViewNative */; };
+		001451F42C518F75001C46CE /* LiveViewNativeRealityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 001451F32C518F75001C46CE /* LiveViewNativeRealityKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001451AC2C500125001C46CE /* Elixirconf Voxels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elixirconf Voxels.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		001451B32C500125001C46CE /* ElixirconfVoxelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixirconfVoxelsApp.swift; sourceTree = "<group>"; };
+		001451B52C500125001C46CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		001451B72C500126001C46CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		001451BA2C500126001C46CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		001451BC2C500126001C46CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		001451C72C5001DD001C46CE /* ConnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingView.swift; sourceTree = "<group>"; };
+		001451C92C5001E8001C46CE /* DisconnectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectedView.swift; sourceTree = "<group>"; };
+		001451CB2C5001F2001C46CE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		001451CD2C5001FC001C46CE /* ReconnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconnectingView.swift; sourceTree = "<group>"; };
+		001451DA2C5019A3001C46CE /* Elixirconf Voxels Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elixirconf Voxels Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		001451DC2C5019A3001C46CE /* Elixirconf_Voxels_CompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elixirconf_Voxels_CompanionApp.swift; sourceTree = "<group>"; };
+		001451DE2C5019A3001C46CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		001451E02C5019A5001C46CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		001451E32C5019A5001C46CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		001451A92C500125001C46CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451C62C500184001C46CE /* LiveViewNativeStylesheet in Frameworks */,
+				001451C42C500184001C46CE /* LiveViewNative in Frameworks */,
+				001451F42C518F75001C46CE /* LiveViewNativeRealityKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		001451D72C5019A3001C46CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451EE2C5019E8001C46CE /* LiveViewNative in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001451A32C500125001C46CE = {
+			isa = PBXGroup;
+			children = (
+				001451EC2C5019DD001C46CE /* Shared */,
+				001451AE2C500125001C46CE /* Elixirconf Voxels */,
+				001451DB2C5019A3001C46CE /* Elixirconf Voxels Companion */,
+				001451AD2C500125001C46CE /* Products */,
+				001451D02C500514001C46CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		001451AD2C500125001C46CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				001451AC2C500125001C46CE /* Elixirconf Voxels.app */,
+				001451DA2C5019A3001C46CE /* Elixirconf Voxels Companion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		001451AE2C500125001C46CE /* Elixirconf Voxels */ = {
+			isa = PBXGroup;
+			children = (
+				001451B32C500125001C46CE /* ElixirconfVoxelsApp.swift */,
+				001451B52C500125001C46CE /* ContentView.swift */,
+				001451B72C500126001C46CE /* Assets.xcassets */,
+				001451BC2C500126001C46CE /* Info.plist */,
+				001451B92C500126001C46CE /* Preview Content */,
+			);
+			path = "Elixirconf Voxels";
+			sourceTree = "<group>";
+		};
+		001451B92C500126001C46CE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				001451BA2C500126001C46CE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		001451D02C500514001C46CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		001451DB2C5019A3001C46CE /* Elixirconf Voxels Companion */ = {
+			isa = PBXGroup;
+			children = (
+				001451DC2C5019A3001C46CE /* Elixirconf_Voxels_CompanionApp.swift */,
+				001451DE2C5019A3001C46CE /* ContentView.swift */,
+				001451E02C5019A5001C46CE /* Assets.xcassets */,
+				001451E22C5019A5001C46CE /* Preview Content */,
+			);
+			path = "Elixirconf Voxels Companion";
+			sourceTree = "<group>";
+		};
+		001451E22C5019A5001C46CE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				001451E32C5019A5001C46CE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		001451EC2C5019DD001C46CE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				001451C72C5001DD001C46CE /* ConnectingView.swift */,
+				001451C92C5001E8001C46CE /* DisconnectedView.swift */,
+				001451CB2C5001F2001C46CE /* ErrorView.swift */,
+				001451CD2C5001FC001C46CE /* ReconnectingView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		001451AB2C500125001C46CE /* Elixirconf Voxels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 001451BF2C500126001C46CE /* Build configuration list for PBXNativeTarget "Elixirconf Voxels" */;
+			buildPhases = (
+				001451A82C500125001C46CE /* Sources */,
+				001451A92C500125001C46CE /* Frameworks */,
+				001451AA2C500125001C46CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Elixirconf Voxels";
+			packageProductDependencies = (
+				001451C32C500184001C46CE /* LiveViewNative */,
+				001451C52C500184001C46CE /* LiveViewNativeStylesheet */,
+				001451F32C518F75001C46CE /* LiveViewNativeRealityKit */,
+			);
+			productName = "Elixirconf Voxels";
+			productReference = 001451AC2C500125001C46CE /* Elixirconf Voxels.app */;
+			productType = "com.apple.product-type.application";
+		};
+		001451D92C5019A3001C46CE /* Elixirconf Voxels Companion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 001451E52C5019A5001C46CE /* Build configuration list for PBXNativeTarget "Elixirconf Voxels Companion" */;
+			buildPhases = (
+				001451D62C5019A3001C46CE /* Sources */,
+				001451D72C5019A3001C46CE /* Frameworks */,
+				001451D82C5019A3001C46CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Elixirconf Voxels Companion";
+			packageProductDependencies = (
+				001451ED2C5019E8001C46CE /* LiveViewNative */,
+			);
+			productName = "Elixirconf Voxels Companion";
+			productReference = 001451DA2C5019A3001C46CE /* Elixirconf Voxels Companion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		001451A42C500125001C46CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					001451AB2C500125001C46CE = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					001451D92C5019A3001C46CE = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 001451A72C500125001C46CE /* Build configuration list for PBXProject "Elixirconf Voxels" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 001451A32C500125001C46CE;
+			packageReferences = (
+				001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */,
+				001451F22C518F75001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */,
+			);
+			productRefGroup = 001451AD2C500125001C46CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				001451AB2C500125001C46CE /* Elixirconf Voxels */,
+				001451D92C5019A3001C46CE /* Elixirconf Voxels Companion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		001451AA2C500125001C46CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451BB2C500126001C46CE /* Preview Assets.xcassets in Resources */,
+				001451B82C500126001C46CE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		001451D82C5019A3001C46CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451E42C5019A5001C46CE /* Preview Assets.xcassets in Resources */,
+				001451E12C5019A5001C46CE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		001451A82C500125001C46CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451CC2C5001F2001C46CE /* ErrorView.swift in Sources */,
+				001451B62C500125001C46CE /* ContentView.swift in Sources */,
+				001451B42C500125001C46CE /* ElixirconfVoxelsApp.swift in Sources */,
+				001451C82C5001DD001C46CE /* ConnectingView.swift in Sources */,
+				001451CA2C5001E8001C46CE /* DisconnectedView.swift in Sources */,
+				001451CE2C5001FC001C46CE /* ReconnectingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		001451D62C5019A3001C46CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001451E82C5019DA001C46CE /* DisconnectedView.swift in Sources */,
+				001451E92C5019DA001C46CE /* ErrorView.swift in Sources */,
+				001451EA2C5019DA001C46CE /* ReconnectingView.swift in Sources */,
+				001451EB2C5019DA001C46CE /* ConnectingView.swift in Sources */,
+				001451DF2C5019A3001C46CE /* ContentView.swift in Sources */,
+				001451DD2C5019A3001C46CE /* Elixirconf_Voxels_CompanionApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		001451BD2C500126001C46CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		001451BE2C500126001C46CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		001451C02C500126001C46CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Elixirconf Voxels/Preview Content\"";
+				DEVELOPMENT_TEAM = XN27J4MRGG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Elixirconf-Voxels";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Debug;
+		};
+		001451C12C500126001C46CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Elixirconf Voxels/Preview Content\"";
+				DEVELOPMENT_TEAM = XN27J4MRGG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Elixirconf-Voxels";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Release;
+		};
+		001451E62C5019A5001C46CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Elixirconf Voxels Companion/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Elixirconf-Voxels";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		001451E72C5019A5001C46CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Elixirconf Voxels Companion/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Elixirconf-Voxels";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		001451A72C500125001C46CE /* Build configuration list for PBXProject "Elixirconf Voxels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001451BD2C500126001C46CE /* Debug */,
+				001451BE2C500126001C46CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		001451BF2C500126001C46CE /* Build configuration list for PBXNativeTarget "Elixirconf Voxels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001451C02C500126001C46CE /* Debug */,
+				001451C12C500126001C46CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		001451E52C5019A5001C46CE /* Build configuration list for PBXNativeTarget "Elixirconf Voxels Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001451E62C5019A5001C46CE /* Debug */,
+				001451E72C5019A5001C46CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		001451F22C518F75001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../../VisionDemos/LiveVoxels/Packages/Voxels;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/liveview-native/liveview-client-swiftui/";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		001451C32C500184001C46CE /* LiveViewNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */;
+			productName = LiveViewNative;
+		};
+		001451C52C500184001C46CE /* LiveViewNativeStylesheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */;
+			productName = LiveViewNativeStylesheet;
+		};
+		001451ED2C5019E8001C46CE /* LiveViewNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */;
+			productName = LiveViewNative;
+		};
+		001451F32C518F75001C46CE /* LiveViewNativeRealityKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LiveViewNativeRealityKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 001451A42C500125001C46CE /* Project object */;
+}

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LiveViewNative
+import LiveViewNativeRealityKit
 
 struct ContentView: View {
     var body: some View {
@@ -15,7 +16,8 @@ struct ContentView: View {
                 development: .localhost,
 //                production: URL(string: "https://example.com")!
                 production: .localhost
-            )
+            ),
+            addons: [.realityKit]
         ) {
             ConnectingView()
         } disconnected: {

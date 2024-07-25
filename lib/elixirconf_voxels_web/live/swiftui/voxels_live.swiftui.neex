@@ -1,48 +1,70 @@
-<List style='navigationTitle("Voxel Dashboard")'>
-  <Section>
-    <Text template="header">Stats</Text>
-    <LabeledContent>
-      <Text template="label">Active Users</Text>
-      <%= length(@presences) %>
-    </LabeledContent>
-    <LabeledContent>
-      <Text template="label">Blocks</Text>
-      <%= @blocks |> Map.keys() |> length() %>
-    </LabeledContent>
-    <DisclosureGroup>
-      <Text template="label">By Color</Text>
+<Group style='inspector(isPresented: attr("inspector-open"), content: :inspector)' inspector-open>
+  <RealityView
+    camera="virtual"
+    style="realityViewCameraControls(.orbit); safeAreaInset(edge: .bottom, content: :palette)"
+  >
+    <.world
+      blocks={@blocks}
       
-      <LabeledContent :for={{"system-" <> color, count} <- (@blocks |> Map.values() |> Enum.frequencies())}>
-        <Text template="label"><%= String.capitalize(color) %></Text>
-        <%= count %>
+      width={@width}
+      height={@height}
+      depth={@depth}
+      
+      scale={@scale}
+      rotation={@rotation}
+    />
+
+    <Group template="palette" style="background(.bar, in: .capsule)">
+      <.palette color={@color} />
+    </Group>
+  </RealityView>
+
+  <List template="inspector" style="interactiveDismissDisabled(true)">
+    <Section>
+      <Text template="header">Stats</Text>
+      <LabeledContent>
+        <Text template="label">Active Users</Text>
+        <%= length(@presences) %>
       </LabeledContent>
-    </DisclosureGroup>
-  </Section>
-  <Section>
-    <Text template="header">Actions</Text>
-    <Button phx-click="clear">Clear Canvas</Button>
-    <Menu>
-      <Text template="label">Fill Base</Text>
+      <LabeledContent>
+        <Text template="label">Blocks</Text>
+        <%= @blocks |> Map.keys() |> length() %>
+      </LabeledContent>
+      <DisclosureGroup>
+        <Text template="label">By Color</Text>
+        
+        <LabeledContent :for={{"system-" <> color, count} <- (@blocks |> Map.values() |> Enum.frequencies())}>
+          <Text template="label"><%= String.capitalize(color) %></Text>
+          <%= count %>
+        </LabeledContent>
+      </DisclosureGroup>
+    </Section>
+    <Section>
+      <Text template="header">Actions</Text>
+      <Button phx-click="clear">Clear Canvas</Button>
+      <Menu>
+        <Text template="label">Fill Base</Text>
+        <Button
+          :for={color <- ["system-red", "system-orange", "system-yellow", "system-green", "system-mint", "system-teal", "system-cyan", "system-blue", "system-indigo", "system-purple", "system-pink", "system-brown", "system-white", "system-gray", "system-black"]}
+          phx-click="fill-base"
+          phx-value-color={color}
+        >
+          <Label>
+            <Image template="icon" systemName="circle.fill" style='foregroundStyle(attr("color"), .blue)' color={color} />
+            <Text template="title"><%= color |> String.replace("system-", "") |> String.capitalize() %></Text>
+          </Label>
+        </Button>
+      </Menu>
+    </Section>
+    <Section>
+      <Text template="header">Templates</Text>
       <Button
-        :for={color <- ["system-red", "system-orange", "system-yellow", "system-green", "system-mint", "system-teal", "system-cyan", "system-blue", "system-indigo", "system-purple", "system-pink", "system-brown", "system-white", "system-gray", "system-black"]}
-        phx-click="fill-base"
-        phx-value-color={color}
+        :for={template <- @templates}
+        phx-click="load"
+        phx-value-template={template}
       >
-        <Label>
-          <Image template="icon" systemName="circle.fill" style='foregroundStyle(attr("color"), .blue)' color={color} />
-          <Text template="title"><%= color |> String.replace("system-", "") |> String.capitalize() %></Text>
-        </Label>
+        Load <%= template %>
       </Button>
-    </Menu>
-  </Section>
-  <Section>
-    <Text template="header">Templates</Text>
-    <Button
-      :for={template <- @templates}
-      phx-click="load"
-      phx-value-template={template}
-    >
-      Load <%= template %>
-    </Button>
-  </Section>
-</List>
+    </Section>
+  </List>
+</Group>

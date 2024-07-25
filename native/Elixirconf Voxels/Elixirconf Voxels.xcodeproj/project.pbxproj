@@ -27,6 +27,8 @@
 		001451EB2C5019DA001C46CE /* ConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001451C72C5001DD001C46CE /* ConnectingView.swift */; };
 		001451EE2C5019E8001C46CE /* LiveViewNative in Frameworks */ = {isa = PBXBuildFile; productRef = 001451ED2C5019E8001C46CE /* LiveViewNative */; };
 		001451F42C518F75001C46CE /* LiveViewNativeRealityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 001451F32C518F75001C46CE /* LiveViewNativeRealityKit */; };
+		001451F72C528982001C46CE /* LiveViewNativeRealityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 001451F62C528982001C46CE /* LiveViewNativeRealityKit */; };
+		007334592C528A7900E7049F /* LiveViewNativeRealityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 007334582C528A7900E7049F /* LiveViewNativeRealityKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001451F72C528982001C46CE /* LiveViewNativeRealityKit in Frameworks */,
 				001451C62C500184001C46CE /* LiveViewNativeStylesheet in Frameworks */,
 				001451C42C500184001C46CE /* LiveViewNative in Frameworks */,
 				001451F42C518F75001C46CE /* LiveViewNativeRealityKit in Frameworks */,
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007334592C528A7900E7049F /* LiveViewNativeRealityKit in Frameworks */,
 				001451EE2C5019E8001C46CE /* LiveViewNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +170,7 @@
 				001451C32C500184001C46CE /* LiveViewNative */,
 				001451C52C500184001C46CE /* LiveViewNativeStylesheet */,
 				001451F32C518F75001C46CE /* LiveViewNativeRealityKit */,
+				001451F62C528982001C46CE /* LiveViewNativeRealityKit */,
 			);
 			productName = "Elixirconf Voxels";
 			productReference = 001451AC2C500125001C46CE /* Elixirconf Voxels.app */;
@@ -186,6 +191,7 @@
 			name = "Elixirconf Voxels Companion";
 			packageProductDependencies = (
 				001451ED2C5019E8001C46CE /* LiveViewNative */,
+				007334582C528A7900E7049F /* LiveViewNativeRealityKit */,
 			);
 			productName = "Elixirconf Voxels Companion";
 			productReference = 001451DA2C5019A3001C46CE /* Elixirconf Voxels Companion.app */;
@@ -220,7 +226,7 @@
 			mainGroup = 001451A32C500125001C46CE;
 			packageReferences = (
 				001451C22C500184001C46CE /* XCRemoteSwiftPackageReference "liveview-client-swiftui" */,
-				001451F22C518F75001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */,
+				001451F52C528982001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */,
 			);
 			productRefGroup = 001451AD2C500125001C46CE /* Products */;
 			projectDirPath = "";
@@ -473,7 +479,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,7 +513,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +565,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		001451F22C518F75001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */ = {
+		001451F52C528982001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../../VisionDemos/LiveVoxels/Packages/Voxels;
 		};
@@ -594,6 +600,15 @@
 		};
 		001451F32C518F75001C46CE /* LiveViewNativeRealityKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = LiveViewNativeRealityKit;
+		};
+		001451F62C528982001C46CE /* LiveViewNativeRealityKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LiveViewNativeRealityKit;
+		};
+		007334582C528A7900E7049F /* LiveViewNativeRealityKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 001451F52C528982001C46CE /* XCLocalSwiftPackageReference "../../../../VisionDemos/LiveVoxels/Packages/Voxels" */;
 			productName = LiveViewNativeRealityKit;
 		};
 /* End XCSwiftPackageProductDependency section */

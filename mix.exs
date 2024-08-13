@@ -54,9 +54,9 @@ defmodule ElixirconfVoxels.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
 
-      {:live_view_native, github: "liveview-native/live_view_native", branch: "main", override: true},
-      {:live_view_native_swiftui, github: "liveview-native/liveview-client-swiftui", branch: "main"},
-      {:live_view_native_stylesheet, github: "liveview-native/live_view_native_stylesheet", branch: "main"},
+      {:live_view_native, "~> 0.3.0-rc.4"},
+      {:live_view_native_swiftui, "~> 0.3.0-rc.4"},
+      {:live_view_native_stylesheet, "~> 0.3.0-rc.4"},
 
       {:nx, "~> 0.7.2"}
     ]

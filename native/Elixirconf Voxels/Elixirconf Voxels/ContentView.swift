@@ -14,8 +14,7 @@ struct ContentView: View {
         #LiveView(
             .automatic(
                 development: .localhost,
-//                production: URL(string: "https://example.com")!
-                production: URL(string: "http://192.168.1.81:4000")!
+                production: URL(string: "https://elixirconf-voxels.fly.dev/")!
             ),
             addons: [.realityKit]
         ) {

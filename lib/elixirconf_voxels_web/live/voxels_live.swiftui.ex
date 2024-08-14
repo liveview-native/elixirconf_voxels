@@ -13,6 +13,40 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive.SwiftUI do
   attr :rest, :global
   def world(assigns) do
     ~LVN"""
+    <Attachment id="base" template="attachments">
+      <Grid
+        style={[
+          ~s[frame(width: attr("size"), height: attr("size"))],
+          "clipShape(.rect(cornerRadius: 10))",
+          "foregroundStyle(.white.opacity(0.2))",
+          "buttonBorderShape(.roundedRectangle)",
+          "buttonStyle(.plain)"
+        ]}
+        horizontalSpacing="0"
+        verticalSpacing="0"
+        size={@width * 38.115}
+      >
+        <GridRow
+          :for={z <- 0..(@depth - 1)}
+        >
+          <Button
+            :for={x <- 0..(@width - 1)}
+            phx-click="set-block-base"
+            phx-value-x={x}
+            phx-value-z={z}
+          >
+            <Rectangle />
+          </Button>
+        </GridRow>
+      </Grid>
+    </Attachment>
+    <ViewAttachmentEntity
+      id="base-entity"
+      attachment="base"
+      transform:translation={[0, -@scale / 2, 0]}
+      transform:rotation={Nx.to_list(Quaternion.euler(-:math.pi / 2, :math.pi / 2 * @rotation, 0))}
+      transform:duration={1}
+    />
     <Entity
       id="world"
       transform:rotation={Nx.to_list(Quaternion.euler(0, :math.pi / 2 * @rotation, 0))}
@@ -22,47 +56,6 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive.SwiftUI do
 
       {@rest}
     >
-      <ModelEntity
-        id="base"
-
-        generateCollisionShapes
-        generateCollisionShapes:static
-
-        transform:translation={[
-          0,
-          -(@scale / 2),
-          0
-        ]}
-
-        phx-click="set-block-base"
-      >
-        <SimpleMaterial
-          template="materials"
-          color="system-white"
-        />
-        <Group template="mesh">
-          <%= for x <- 0..(@width - 1)//5 do %>
-            <Plane
-              :for={z <- 0..(@depth - 1)//5}
-
-              offset={[
-                -(@scale / 2) + ((@scale / @width) * 5 / 2) + (x * (@scale / @width)),
-                0,
-                -(@scale / 2) + ((@scale / @width) * 5 / 2) + (z * (@scale / @width)),
-              ]}
-
-              width={(@scale / @width) * 5 - 0.0025}
-              depth={(@scale / @depth) * 5 - 0.0025}
-
-              cornerRadius={0.01}
-            />
-          <% end %>
-        </Group>
-        <Group template="components">
-          <OpacityComponent opacity={0.5} />
-          <HoverEffectComponent />
-        </Group>
-      </ModelEntity>
       <%= for {{x, y, z}, color} <- @blocks do %>
         <ModelEntity
           id={"#{x},#{y},#{z}"}

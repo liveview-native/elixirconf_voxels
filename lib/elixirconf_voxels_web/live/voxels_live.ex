@@ -54,23 +54,8 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive do
     ~H"hello, world!"
   end
 
-  def handle_event("set-block-base", %{ "_location" => [tap_x, tap_y, tap_z] }, socket) do
-    [tap_x, tap_y, tap_z] = case rem(socket.assigns.rotation, 4) do
-      0 ->
-        [tap_x, tap_y, tap_z]
-      1 ->
-        [-tap_z, tap_y, tap_x]
-      2 ->
-        [-tap_x, tap_y, -tap_z]
-      3 ->
-        [tap_z, tap_y, -tap_x]
-    end
-    location = {
-      round((tap_x + (socket.assigns.scale / 2) - (socket.assigns.scale / socket.assigns.width / 2)) * (socket.assigns.width / socket.assigns.scale)),
-      round((tap_y + (socket.assigns.scale / 2) - (socket.assigns.scale / socket.assigns.height / 2)) * (socket.assigns.height / socket.assigns.scale)),
-      round((tap_z + (socket.assigns.scale / 2) - (socket.assigns.scale / socket.assigns.depth / 2)) * (socket.assigns.depth / socket.assigns.scale))
-    }
-    {:noreply, assign(socket, blocks: ElixirconfVoxels.World.put(location, socket.assigns.color))}
+  def handle_event("set-block-base", %{ "x" => x, "z" => z }, socket) do
+    {:noreply, assign(socket, blocks: ElixirconfVoxels.World.put({String.to_integer(x), 0, String.to_integer(z)}, socket.assigns.color))}
   end
 
   def handle_event(

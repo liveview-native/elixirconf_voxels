@@ -112,14 +112,14 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive.SwiftUI do
       <Button
         phx-click="pick-color"
         phx-value-color="delete"
-        style="foregroundStyle(.red);"
+        style="foregroundStyle(.white);"
       >
         <ZStack style="frame(width: 24, height: 24)">
           <Image
-            systemName="trash.circle.fill"
-            style="resizable(); scaledToFill(); symbolRenderingMode(.hierarchical)"
+            systemName="eraser.fill"
+            style="resizable(); scaledToFill(); padding(4); background(.red, in: .circle);"
           />
-          <Circle :if={@color == nil} style="stroke(.red, lineWidth: 3)" />
+          <Circle :if={@color == nil} style="stroke(.white, lineWidth: 3)" />
         </ZStack>
       </Button>
     </HStack>

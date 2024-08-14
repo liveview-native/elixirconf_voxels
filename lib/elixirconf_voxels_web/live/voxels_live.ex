@@ -3,6 +3,7 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive do
   use ElixirconfVoxelsNative, :live_view
 
   @templates %{
+    "Castle" => ElixirconfVoxels.WorldTemplates.castle,
     "Island" => ElixirconfVoxels.WorldTemplates.island,
     "Elixir Logo" => ElixirconfVoxels.WorldTemplates.elixir_logo,
     "DockYard Logo" => ElixirconfVoxels.WorldTemplates.dockyard_logo,

@@ -11,13 +11,15 @@ import LiveViewNativeRealityKit
 
 struct ContentView: View {
     var body: some View {
-        #LiveView(
-            .automatic(
-                development: .localhost,
-//                production: URL(string: "https://example.com")!
-                production: .localhost
-            ),
-            addons: [.realityKit]
+        LiveView(
+            registry: ElixirconfVoxelsRegistry.self,
+//            .automatic(
+//                development: .localhost,
+////                production: URL(string: "https://example.com")!
+//                production: .localhost
+//            ),
+//            URL(string: "https://elixirconf-voxels.fly.dev/")!
+            .localhost
         ) {
             ConnectingView()
         } disconnected: {

@@ -68,11 +68,6 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive.SwiftUI do
 
           generateCollisionShapes
           generateCollisionShapes:static
-
-          phx-click="set-block-relative"
-          phx-value-x={x}
-          phx-value-y={y}
-          phx-value-z={z}
         >
           <SimpleMaterial
             template="materials"
@@ -85,6 +80,13 @@ defmodule ElixirconfVoxelsWeb.VoxelsLive.SwiftUI do
           />
           <Group template="components">
             <HoverEffectComponent />
+            <OptimisticVoxel
+              phx-click="set-block-relative"
+              phx-value-x={x}
+              phx-value-y={y}
+              phx-value-z={z}
+              phx-value-rotation={@rotation}
+            />
           </Group>
         </ModelEntity>
       <% end %>

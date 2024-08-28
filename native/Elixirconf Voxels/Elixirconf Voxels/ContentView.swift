@@ -12,10 +12,12 @@ import LiveViewNativeRealityKit
 struct ContentView: View {
     var body: some View {
         #LiveView(
-            .automatic(
-                development: .localhost,
-                production: URL(string: "https://elixirconf-voxels.fly.dev/")!
-            ),
+//            .automatic(
+//                development: URL(string: "https://elixirconf-voxels.fly.dev/")!,
+//                production: URL(string: "https://elixirconf-voxels.fly.dev/")!
+////                production: .localhost
+//            ),
+            URL(string: "https://elixirconf-voxels.fly.dev/")!,
             addons: [.realityKit]
         ) {
             ConnectingView()

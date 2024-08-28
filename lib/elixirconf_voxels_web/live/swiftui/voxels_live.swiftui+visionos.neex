@@ -1,42 +1,44 @@
-<RealityView audibleClicks>
-  <Attachment id="palette" template="attachments">
-    <.palette color={@color} />
-  </Attachment>
-  <ViewAttachmentEntity
-    attachment="palette"
-    transform:translation={[0, -@scale / 2, @scale / 2 + 0.03]}
-    transform:rotation={Nx.to_list(Quaternion.euler(-:math.pi / 2, 0, 0))}
-  />
-  <%!-- <Attachment id="templates" template="attachments">
-    <HStack style="controlSize(.mini); padding(8); glassBackgroundEffect();">
-      <Button
-        :for={template <- @templates}
-        phx-click="load"
-        phx-value-template={template}
-      >
-        <%= template %>
-      </Button>
-      <Button
-        phx-click="clear"
-        style="tint(.red); buttonStyle(.borderedProminent);"
-      >
-        <Label systemImage="trash">Clear</Label>
-      </Button>
-    </HStack>
-  </Attachment> --%>
-  <%!-- <ViewAttachmentEntity
-    attachment="templates"
-    transform:translation={[@scale / 2 + 0.03, -@scale / 2, 0]}
-    transform:rotation={Nx.to_list(Quaternion.euler(-:math.pi / 2, -:math.pi / 2, 0))}
-  /> --%>
-  <.world
-    blocks={@blocks}
-    
-    width={@width}
-    height={@height}
-    depth={@depth}
-    
-    scale={@scale}
-    rotation={@rotation}
-  />
-</RealityView>
+<OptimisticVoxelContext color={@color}>
+  <RealityView audibleClicks>
+    <Attachment id="palette" template="attachments">
+      <.palette color={@color} />
+    </Attachment>
+    <ViewAttachmentEntity
+      attachment="palette"
+      transform:translation={[0, -@scale / 2, @scale / 2 + 0.03]}
+      transform:rotation={Nx.to_list(Quaternion.euler(-:math.pi / 2, 0, 0))}
+    />
+    <%!-- <Attachment id="templates" template="attachments">
+      <HStack style="controlSize(.mini); padding(8); glassBackgroundEffect();">
+        <Button
+          :for={template <- @templates}
+          phx-click="load"
+          phx-value-template={template}
+        >
+          <%= template %>
+        </Button>
+        <Button
+          phx-click="clear"
+          style="tint(.red); buttonStyle(.borderedProminent);"
+        >
+          <Label systemImage="trash">Clear</Label>
+        </Button>
+      </HStack>
+    </Attachment> --%>
+    <%!-- <ViewAttachmentEntity
+      attachment="templates"
+      transform:translation={[@scale / 2 + 0.03, -@scale / 2, 0]}
+      transform:rotation={Nx.to_list(Quaternion.euler(-:math.pi / 2, -:math.pi / 2, 0))}
+    /> --%>
+    <.world
+      blocks={@blocks}
+      
+      width={@width}
+      height={@height}
+      depth={@depth}
+      
+      scale={@scale}
+      rotation={@rotation}
+    />
+  </RealityView>
+</OptimisticVoxelContext>

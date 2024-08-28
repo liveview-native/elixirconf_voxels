@@ -1,23 +1,25 @@
 <Group style='inspector(isPresented: attr("inspector-open"), content: :inspector)' inspector-open>
-  <RealityView
-    camera="virtual"
-    style="realityViewCameraControls(.orbit); safeAreaInset(edge: .bottom, content: :palette)"
-  >
-    <.world
-      blocks={@blocks}
-      
-      width={@width}
-      height={@height}
-      depth={@depth}
-      
-      scale={@scale}
-      rotation={@rotation}
-    />
+  <OptimisticVoxelContext color={@color}>
+    <RealityView
+      camera="virtual"
+      style="realityViewCameraControls(.orbit); safeAreaInset(edge: .bottom, content: :palette)"
+    >
+      <.world
+        blocks={@blocks}
+        
+        width={@width}
+        height={@height}
+        depth={@depth}
+        
+        scale={@scale}
+        rotation={@rotation}
+      />
 
-    <Group template="palette" style="background(.bar, in: .capsule)">
-      <.palette color={@color} />
-    </Group>
-  </RealityView>
+      <Group template="palette" style="background(.bar, in: .capsule)">
+        <.palette color={@color} />
+      </Group>
+    </RealityView>
+  </OptimisticVoxelContext>
 
   <List template="inspector" style="interactiveDismissDisabled(true)">
     <Section>
